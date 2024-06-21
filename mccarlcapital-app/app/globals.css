@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 a:hover, button:hover {
-    color: #AF8C52;
+    color: theme('colors.gold');
+}
+
+.text-drop-shadow {
+    text-shadow: 0.75px 0.75px 0.75px black;
 }

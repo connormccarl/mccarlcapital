@@ -39,7 +39,7 @@ const classNames = (...classes: string[]) => {
 }
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="bg-white">
