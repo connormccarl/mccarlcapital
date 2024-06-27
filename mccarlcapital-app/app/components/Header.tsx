@@ -61,7 +61,7 @@ export default function Header() {
           </Link>
         </div>
         <div className="flex lg:hidden">
-            <Link href="tel:+1(925)378-1728" className='p-1.5 bg-[#3d8627] rounded-full'>
+            <Link href="tel:+1(925)378-1728" className='p-1.5 bg-green rounded-full'>
                 <span className="sr-only">Call us</span>
                 <PhoneIcon className="h-6 text-white" aria-hidden="true" />
             </Link>
@@ -107,14 +107,13 @@ export default function Header() {
               </div>
             </PopoverPanel>
           </Popover>
-
           {/*<Link href="#" className="text-sm font-semibold leading-6 text-gray-900">
             Investments
           </Link>*/}
-          <Link href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link href="/contact" className="text-sm font-semibold leading-6 text-gray-900">
             Contact
           </Link>
-          <Link href="#" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link href="/ira" className="text-sm font-semibold leading-6 text-gray-900">
             IRA
           </Link>
         </PopoverGroup>
@@ -122,7 +121,7 @@ export default function Header() {
             <Link href="tel:+1(925)378-1728" className='me-3'>
                 (925) 378-1728
             </Link>
-          <Button className="rounded bg-[#AF8C52] hover:bg-[#3d8627] hover:text-white px-4 py-2 text-sm font-semibold leading-6 text-white">
+          <Button className="rounded bg-[#AF8C52] hover:bg-green hover:text-white px-4 py-2 text-sm font-semibold leading-6 text-white">
             Ready to Invest? <span aria-hidden="true">&rarr;</span>
           </Button>
         </div>
@@ -149,7 +148,7 @@ export default function Header() {
                 height={80} 
               />
             </Link>
-            <Link href="tel:+1(925)378-1728" className='p-1.5 bg-[#3d8627] rounded-full'>
+            <Link href="tel:+1(925)378-1728" className='p-1.5 bg-green rounded-full'>
                 <span className="sr-only">Call us</span>
                 <PhoneIcon className="h-6 text-white" aria-hidden="true" />
             </Link>
@@ -189,13 +188,13 @@ export default function Header() {
                   Investments
                 </Link>*/}
                 <Link
-                  href="#"
+                  href="/contact"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Contact
                 </Link>
                 <Link
-                  href="#"
+                  href="/ira"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   IRA

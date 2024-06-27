@@ -25,7 +25,7 @@ export default function Index() {
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Button
                 href="#"
-                className="rounded-md bg-[#AF8C52] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#3d8627] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#AF8C52]"
+                className="rounded-md bg-[#AF8C52] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#AF8C52]"
               >
                 Get started
               </Button>
@@ -42,7 +42,7 @@ export default function Index() {
             Invest with your self-directed IRA or 401K
           </div>
           <div className="mt-2 sm:mt-0">
-            <Button className="ms-3 rounded py-2 px-4 text-base bg-white text-black hover:bg-[#3d8627] hover:text-white">
+            <Button className="ms-3 rounded py-2 px-4 text-base bg-white text-black hover:bg-green hover:text-white">
               Learn More
             </Button>
           </div>

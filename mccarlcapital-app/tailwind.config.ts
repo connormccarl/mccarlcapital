@@ -15,10 +15,19 @@ const config: Config = {
       },
         colors: {
           gold: '#AF8C52',
+          green: '#3d8627',
+          icon: 'rgb(70, 205, 221)',
+          orange: 'rgb(246, 83, 26)',
+
+      },
+      fontFamily: {
+        funnel: ['var(--font-barlow)', 'sans-serif']
       }
     },
     
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 };
 export default config;

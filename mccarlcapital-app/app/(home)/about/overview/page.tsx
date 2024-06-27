@@ -105,8 +105,7 @@ const Overview = () => {
                                 <strong>McCarl Capital</strong> acquires and manages real estate properties with a focus on both near-term income generation and long-term value creation. We raise money from investors to invest in commercial real estate such as apartment buildings, mobile home parks, RV parks, office buildings and hotels.
                             </p>
                             <Button
-                                href="#"
-                                className="rounded-md bg-[#AF8C52] mt-3 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-[#3d8627] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#AF8C52]"
+                                className="rounded-md bg-[#AF8C52] mt-3 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#AF8C52]"
                             >
                                 Invest Now
                             </Button>
