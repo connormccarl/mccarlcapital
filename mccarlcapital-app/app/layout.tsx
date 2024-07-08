@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "../globals.css";
-import Header from "../components/Header";
-import TestHeader from "../components/TestHeader";
+import { Inter, Barlow } from "next/font/google";
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+const barlow = Barlow({
+  subsets: ['latin'],
+  weight: ['100','200','300','400','500','600','700','800','900'],
+  variable: '--font-barlow',
+});
 
 export const metadata: Metadata = {
   title: "McCarl Capital",
@@ -19,7 +22,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
-        <Header />
         {children}
       </body>
     </html>
