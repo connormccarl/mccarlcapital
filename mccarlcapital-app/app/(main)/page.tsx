@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@headlessui/react";
+import CustomButton from "@/components/CustomButton";
 
 export default function Index() {
   return (
@@ -23,11 +24,9 @@ export default function Index() {
               Protecting your future with large commerical real estate investments for the average person. Offering great cashflow and appreciation for your immediate needs and long-term wealth.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button
-                className="rounded-md bg-[#AF8C52] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#AF8C52]"
-              >
+              <CustomButton>
                 Get started
-              </Button>
+              </CustomButton>
               <a href="#" className="text-sm font-semibold leading-6">
                 Learn more <span aria-hidden="true">→</span>
               </a>

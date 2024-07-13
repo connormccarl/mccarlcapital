@@ -1,5 +1,7 @@
 import React, { ReactNode } from 'react'
-import Header from "@/components/Header";
+import AuthProvider from '@/components/AuthProvider';
+import AdminHeader from '@/components/AdminHeader';
+
 
 interface Props {
   children: ReactNode;
@@ -7,10 +9,10 @@ interface Props {
 
 const MainLayout = ({ children }: Props) => {
   return (
-    <>
-      <Header />
+    <AuthProvider>
+      <AdminHeader />
       {children}
-    </>
+    </AuthProvider>
   )
 }
 

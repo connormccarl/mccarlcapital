@@ -20,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
+    <html lang="en" className="h-full bg-white scroll-smooth">
+      <body className={`${inter.className} h-full`}>
         {children}
       </body>
     </html>

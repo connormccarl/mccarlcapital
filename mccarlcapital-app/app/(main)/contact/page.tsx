@@ -1,5 +1,5 @@
 import React from 'react'
-import ContactForm from '../../components/ContactForm'
+import ContactForm from '@/components/ContactForm'
 
 import { BuildingOffice2Icon, EnvelopeIcon, PhoneIcon } from '@heroicons/react/24/outline'
 

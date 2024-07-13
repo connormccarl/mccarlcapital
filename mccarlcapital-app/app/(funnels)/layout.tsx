@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import FunnelHeader from "../components/FunnelHeader";
+import FunnelHeader from "@/components/FunnelHeader";
 
 interface Props {
   children: ReactNode;
