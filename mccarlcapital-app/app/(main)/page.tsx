@@ -34,7 +34,7 @@ export default function Index() {
           </div>
         </div>
       </div>
-      <div className="absolute w-screen left-0 bg-[#AF8C52] text-white">
+      <div className="w-screen left-0 bg-[#AF8C52] text-white">
         <div className="flex flex-col sm:flex-row items-center justify-center p-5">
           <div className="col-span-4 text-lg uppercase text-center flex justify-center">
             Invest with your self-directed IRA or 401K
