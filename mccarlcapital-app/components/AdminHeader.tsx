@@ -54,7 +54,7 @@ export default function AdminHeader() {
           <div>
             {session!.user!.name}
           </div>
-          <button onClick={() => signOut()} className="text-sm font-semibold leading-6 text-gray-900 ms-5">
+          <button onClick={() => signOut({ callbackUrl: '/'})} className="text-sm font-semibold leading-6 text-gray-900 ms-5">
             Sign Out
           </button>
         </div>

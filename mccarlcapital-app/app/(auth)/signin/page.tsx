@@ -19,7 +19,7 @@ const Signin = () => {
   const { errors } = formState;
 
   const onSubmit = ({ email, password }: { email: string, password: string}) => {
-    signIn("credentials", { email, password });
+    signIn("credentials", { callbackUrl: '/dashboard', email, password });
   }
 
   return (
