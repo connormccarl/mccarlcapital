@@ -12,7 +12,7 @@ const IRA = () => {
   return (
     <div className='mx-auto max-w-7xl text-center font-funnel mb-20'>
       <div className='uppercase text-5xl font-extrabold'>Invest with your 401K or IRA Today!</div>
-      <div className='text-gray-400 mt-3 capitalize text-3xl font-light'>Learn the dirty little secret your financial advisor doesn't want you to know</div>
+      <div className='text-gray-400 mt-3 capitalize text-3xl font-light'>Learn the dirty little secret your financial advisor doesn&apos;t want you to know</div>
 
       <div className='grid grid-cols-1 lg:grid-cols-12 px-10 pt-8'>
         <div className='flex justify-center lg:col-span-5'>

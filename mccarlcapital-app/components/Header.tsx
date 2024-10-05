@@ -122,9 +122,9 @@ export default function Header() {
             <Link href="/contact" className="text-sm font-semibold leading-6 text-gray-900  hover:text-gold">
               Contact
             </Link>
-            <Link href="/ira" className="text-sm font-semibold leading-6 text-gray-900 hover:text-gold">
+            {/*<Link href="/ira" className="text-sm font-semibold leading-6 text-gray-900 hover:text-gold">
               IRA
-            </Link>
+            </Link>*/}
           </PopoverGroup>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center">
@@ -212,7 +212,7 @@ export default function Header() {
                 >
                   Contact
                 </Button>
-                <Button
+                {/*<Button
                   onClick={() => {
                     router.push('/ira');
                     setMobileMenuOpen(false);
@@ -220,7 +220,7 @@ export default function Header() {
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   IRA
-                </Button>
+                </Button>*/}
               </div>
               <div className="py-6">
                 <Button

@@ -106,7 +106,7 @@ export default function Markets() {
                         The region is home to several major universities, including Duke University, University of North Carolina at Chapel Hill, and North Carolina State University, which collectively house tens of thousands of students. This creates steady demand for student housing and long-term rentals.
                     </p>
                     <p className="mt-6 text-base leading-7 text-gray-600">
-                        Approximately 40-45% of the population rents their housing, which is lower than national urban averages but reflective of the area's strong rental demand, especially in the urban and university-centric areas. 
+                        Approximately 40-45% of the population rents their housing, which is lower than national urban averages but reflective of the area&apos;s strong rental demand, especially in the urban and university-centric areas. 
                     </p>
                 </div>
                 <div>
@@ -125,7 +125,7 @@ export default function Markets() {
                         Rental Yield and ROI
                     </p>
                     <p className="mt-6 text-base leading-7 text-gray-600">
-                        The average rental yield in Raleigh-Durham is around 5-7%, depending on the specific location and type of property, with neighborhoods closer to RTP or universities offering better returns. This is in line with the document's recommendation of focusing on areas with higher ROI potential.
+                        The average rental yield in Raleigh-Durham is around 5-7%, depending on the specific location and type of property, with neighborhoods closer to RTP or universities offering better returns. This is in line with the document&apos;s recommendation of focusing on areas with higher ROI potential.
                     </p>
                     <p className="mt-6 text-base leading-7 text-gray-600">
                         The combination of rental appreciation and high demand ensures a strong long-term ROI. Investors have seen both capital appreciation and steady cash flow from apartment investments, making this a solid choice for apartment investing. 
@@ -186,7 +186,7 @@ export default function Markets() {
             Raleigh-Durham, NC is an excellent market for apartment investing.
         </h2>
         <p className="mt-6 text-base leading-7 text-gray-600">
-            Don't believe us? Look at the recap numbers below!
+            Don&apos;t believe us? Look at the recap numbers below!
         </p>
         </div>
         <div className="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">

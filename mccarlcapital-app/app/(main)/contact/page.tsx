@@ -35,7 +35,7 @@ const Contact = () => {
             </div>
             <h2 className="text-3xl font-bold tracking-tight text-gray-900">Get in touch</h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Whether you want to invest, have questions, or want to learn more about what we do, we are here to help. Don't hestitate to reach out.
+              Whether you want to invest, have questions, or want to learn more about what we do, we are here to help. Don&apos;t hestitate to reach out.
             </p>
             <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
               {/*<div className="flex gap-x-4">
