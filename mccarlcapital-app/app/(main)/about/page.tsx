@@ -109,7 +109,7 @@ const Overview = () => {
                             >
                                 Invest Now
                             </Button>
-                            <a href="#benefits" className="text-sm font-semibold leading-6 ml-6">
+                            <a href="#benefits" className="text-sm font-semibold leading-6 ml-6 hover:text-gold">
                                 Benefits <span aria-hidden="true">→</span>
                             </a>
                         </div>

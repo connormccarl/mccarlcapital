@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Barlow } from "next/font/google";
+import { GoogleTagManager } from "@next/third-parties/google";
+
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -21,6 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full bg-white scroll-smooth">
+      {process.env.NODE_ENV === "production" ? (
+        <GoogleTagManager gtmId="GTM-TXSSXL55" />
+      ) : null}
       <body className={`${inter.className} h-full`}>
         {children}
       </body>

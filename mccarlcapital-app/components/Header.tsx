@@ -1,8 +1,10 @@
-"use client"
+'use client'
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
+  Button,
   Dialog,
   DialogPanel,
   Disclosure,
@@ -13,21 +15,24 @@ import {
   PopoverGroup,
   PopoverPanel,
   Transition,
+  CloseButton
 } from '@headlessui/react'
 import {
   Bars3Icon,
   XMarkIcon,
   InformationCircleIcon,
   UsersIcon,
+  HomeModernIcon,
   NewspaperIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import CustomButton from './CustomButton'
 
 const about = [
-  { name: 'Overview', description: 'Get to know us better', href: '/about/overview', icon: InformationCircleIcon },
-  { name: 'Team', description: 'See who you are working with', href: '/about/team', icon: UsersIcon },
-  { name: 'Blog', description: 'Educate yourself and stay informed', href: '/about/blog', icon: NewspaperIcon },
+  { name: 'Overview', description: 'Get to know us better', href: '/about', icon: InformationCircleIcon },
+  { name: 'Markets', description: 'See where we invest', href: '/markets', icon: HomeModernIcon },
+  { name: 'Team', description: 'See who you are working with', href: '/team', icon: UsersIcon },
+  { name: 'Blog', description: 'Educate yourself and stay informed', href: '/blog', icon: NewspaperIcon },
 ]
 const callsToAction = [
   { name: 'Watch overview', href: '#', icon: PlayCircleIcon },
@@ -39,7 +44,9 @@ const classNames = (...classes: string[]) => {
 }
 
 export default function Header() {
+  const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openPanel, setOpenPanel] = useState(false);
 
   return (
     <header className="bg-white">
@@ -69,12 +76,12 @@ export default function Header() {
           </div>
           <PopoverGroup className="hidden lg:flex lg:gap-x-12 ps-5">
             <Popover className="relative">
-              <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900">
+              <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:text-gold">
                 About
                 <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
               </PopoverButton>
 
-              <PopoverPanel transition className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in">
+              <PopoverPanel data-open={openPanel ? true : null} transition className="absolute -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5 transition data-[closed]:translate-y-1 data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in">
                 <div className="p-4">
                   {about.map((item) => (
                     <div
@@ -85,10 +92,10 @@ export default function Header() {
                         <item.icon className="h-6 w-6 text-gray-600 group-hover:text-[#AF8C52]" aria-hidden="true" />
                       </div>
                       <div className="flex-auto">
-                        <Link href={item.href} className="block font-semibold text-gray-900">
+                        <CloseButton as={Link} href={item.href} className="block font-semibold text-gray-900">
                           {item.name}
                           <span className="absolute inset-0" />
-                        </Link>
+                        </CloseButton>
                         <p className="mt-1 text-gray-600">{item.description}</p>
                       </div>
                     </div>
@@ -96,14 +103,15 @@ export default function Header() {
                 </div>
                 <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
                   {callsToAction.map((item) => (
-                    <Link
+                    <CloseButton
+                    as={Link}
                       key={item.name}
                       href={item.href}
                       className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
                     >
                       <item.icon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
                       {item.name}
-                    </Link>
+                    </CloseButton>
                   ))}
                 </div>
               </PopoverPanel>
@@ -111,19 +119,19 @@ export default function Header() {
             {/*<Link href="#" className="text-sm font-semibold leading-6 text-gray-900">
               Investments
             </Link>*/}
-            <Link href="/contact" className="text-sm font-semibold leading-6 text-gray-900">
+            <Link href="/contact" className="text-sm font-semibold leading-6 text-gray-900  hover:text-gold">
               Contact
             </Link>
-            <Link href="/ira" className="text-sm font-semibold leading-6 text-gray-900">
+            <Link href="/ira" className="text-sm font-semibold leading-6 text-gray-900 hover:text-gold">
               IRA
             </Link>
           </PopoverGroup>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center">
-          <Link href="tel:+1(925)378-1728" className='me-5'>
+          <Link href="tel:+1(925)378-1728" className='me-5 hover:text-gold'>
               (925) 378-1728
           </Link>
-          <Link href="/signin" className="text-sm font-semibold leading-6 text-gray-900 me-5">
+          <Link href="/signin" className="text-sm font-semibold leading-6 text-gray-900 me-5 hover:text-gold">
             Login
           </Link>
           <CustomButton>
@@ -175,8 +183,11 @@ export default function Header() {
                         {[...about, ...callsToAction].map((item) => (
                           <DisclosureButton
                             key={item.name}
-                            as={Link}
-                            href={item.href}
+                            as={Button}
+                            onClick={() => {
+                              router.push(item.href);
+                              setMobileMenuOpen(false);
+                            }}
                             className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                           >
                             {item.name}
@@ -192,26 +203,35 @@ export default function Header() {
                 >
                   Investments
                 </Link>*/}
-                <Link
-                  href="/contact"
+                <Button
+                  onClick={() => {
+                    router.push('/contact');
+                    setMobileMenuOpen(false);
+                  }}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Contact
-                </Link>
-                <Link
-                  href="/ira"
+                </Button>
+                <Button
+                  onClick={() => {
+                    router.push('/ira');
+                    setMobileMenuOpen(false);
+                  }}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   IRA
-                </Link>
+                </Button>
               </div>
               <div className="py-6">
-                <Link
-                  href="/signin"
+                <Button
+                  onClick={() => {
+                    router.push('/signin');
+                    setMobileMenuOpen(false);
+                  }}
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Login
-                </Link>
+                </Button>
                 <Link
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"

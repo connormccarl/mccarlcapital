@@ -1,7 +1,7 @@
 import prisma from "@/prisma/db";
 import { NewUser, UpdateUser } from "../models";
 
-import schema from "./schema";
+import { userSchema } from "./schemas";
 
 const secret = process.env.SECRET as string;
 
@@ -41,7 +41,7 @@ async function getByEmail(email: string) {
 }
 
 async function create(params: NewUser) {
-    const validation = schema.safeParse(params);
+    const validation = userSchema.safeParse(params);
     if(!validation.success)
         throw validation.error.errors;
 
@@ -62,7 +62,7 @@ async function create(params: NewUser) {
 }
 
 async function update(id: number, params: UpdateUser) {
-    const validation = schema.safeParse(params);
+    const validation = userSchema.safeParse(params);
     if(!validation.success)
         throw validation.error.errors;
 

@@ -12,7 +12,7 @@ const navigation = {
         {
             name: 'LinkedIn',
             href: 'https://www.linkedin.com/company/mccarlcapital',
-            icon: (props) => (
+            icon: (props: any) => (
                 <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
                 <path 
                     fillRule="evenodd"
@@ -25,7 +25,7 @@ const navigation = {
         {
             name: 'YouTube',
             href: 'https://www.youtube.com/@connormccarl',
-            icon: (props) => (
+            icon: (props: any) => (
                 <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
                 <path
                     fillRule="evenodd"
@@ -38,7 +38,7 @@ const navigation = {
         {
         name: 'Facebook',
         href: '#',
-        icon: (props) => (
+        icon: (props: any) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path
               fillRule="evenodd"
@@ -51,7 +51,7 @@ const navigation = {
       {
         name: 'Instagram',
         href: 'https://www.instagram.com/mccarlcapital',
-        icon: (props) => (
+        icon: (props: any) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path
               fillRule="evenodd"
@@ -64,7 +64,7 @@ const navigation = {
       {
         name: 'X',
         href: 'https://x.com/connormccarl',
-        icon: (props) => (
+        icon: (props: any) => (
           <svg fill="currentColor" viewBox="0 0 24 24" {...props}>
             <path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z" />
           </svg>
@@ -86,8 +86,8 @@ const Footer = () => {
             src="/banner.png"
             className="h-20"
           />
-          <div className="mt-10 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-            <div className="md:grid md:grid-cols-2 md:gap-8">
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+            <div className="grid grid-cols-2 gap-8">
               <div>
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">Contact</h3>
                 <div className="mt-6 space-y-2">
@@ -95,7 +95,7 @@ const Footer = () => {
                   <div className='text-sm leading-6 text-gray-600'>invest@mccarlcapital.com</div>
                 </div>
               </div>
-              <div className="mt-10 md:mt-0">
+              <div className="">
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">Legal</h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.legal.map((item) => (
@@ -108,7 +108,7 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="md:grid md:grid-cols-1 md:gap-8">
+            <div className="md:grid md:grid-cols-1 md:gap-8 break-words">
               <div className='text-xs'>
                 <div><strong>Investing involves risk, including loss of principal.</strong> Past performance does not guarantee or indicate future results. Any historical returns, expected returns, or probability projections may not reflect actual future performance. While the data we use from third parties is believed to be reliable, we cannot ensure the accuracy or completeness of data provided by investors or other third parties. Neither McCarl Capital nor any of its affiliates provide tax advice and do not represent in any manner that the outcomes described herein will result in any particular tax consequence. Offers to sell, or solicitations of offers to buy, any security can only be made through official offering documents that contain important information about investment objectives, risks, fees and expenses. Prospective investors should consult with a tax, legal and/or financial adviser before making any investment decision.
                 <br/><br/>

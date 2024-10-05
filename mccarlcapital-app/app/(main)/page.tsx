@@ -10,7 +10,7 @@ export default function Index() {
           <div className="hidden sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 pb-3 text-sm leading-6">
               Announcing our next fund.{' '}
-              <a href="#" className="font-semibold text-[#AF8C52]">
+              <a href="#" className="font-semibold text-[#AF8C52] hover:text-white">
                 <span className="absolute inset-0" aria-hidden="true" />
                 Read more <span aria-hidden="true">&rarr;</span>
               </a>
@@ -27,7 +27,7 @@ export default function Index() {
               <CustomButton>
                 Get started
               </CustomButton>
-              <a href="#" className="text-sm font-semibold leading-6">
+              <a href="#" className="text-sm font-semibold leading-6 hover:text-gold">
                 Learn more <span aria-hidden="true">→</span>
               </a>
             </div>

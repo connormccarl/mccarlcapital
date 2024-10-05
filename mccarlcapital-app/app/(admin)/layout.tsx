@@ -18,6 +18,7 @@ import {
   Cog6ToothIcon,
   PencilSquareIcon,
   XMarkIcon,
+  HomeIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { signOut } from 'next-auth/react'
@@ -27,7 +28,8 @@ interface Props {
 }
 
 const navigation = [
-  { name: 'Posts', href: '/dashboard', icon: PencilSquareIcon },
+  { name: 'Home', href: '/dashboard', icon: HomeIcon },
+  { name: 'Posts', href: '/posts', icon: PencilSquareIcon },
 ]
 /*
 const teams = [
@@ -51,7 +53,7 @@ const AdminLayout = ({ children }: Props) => {
 
   return (
     <>
-    <div>
+      <div>
         <Dialog open={sidebarOpen} onClose={setSidebarOpen} className="relative z-50 lg:hidden">
           <DialogBackdrop
             transition
@@ -74,11 +76,13 @@ const AdminLayout = ({ children }: Props) => {
               {/* Sidebar component, swap this element with another sidebar if you like */}
               <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-4">
                 <div className="flex h-16 shrink-0 items-center">
-                  <img
-                    alt="McCarl Capital"
-                    src="/banner.png"
-                    className="h-16 w-auto"
-                  />
+                  <Link href="/">
+                    <img
+                      alt="McCarl Capital"
+                      src="/banner.png"
+                      className="h-16 w-auto"
+                    />
+                  </Link>
                 </div>
                 <nav className="flex flex-1 flex-col">
                   <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -95,14 +99,14 @@ const AdminLayout = ({ children }: Props) => {
                               className={classNames(
                                 active === item.href
                                   ? 'bg-gray-50 text-gold'
-                                  : 'text-gray-700 hover:bg-gray-50 hover:text-gold',
+                                  : 'text-black hover:bg-gray-50 hover:text-gold',
                                 'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 w-full',
                               )}
                             >
                               <item.icon
                                 aria-hidden="true"
                                 className={classNames(
-                                  active === item.href ? 'text-gold' : 'text-gray-400 group-hover:text-gold',
+                                  active === item.href ? 'text-gold' : 'text-black group-hover:text-gold',
                                   'h-6 w-6 shrink-0',
                                 )}
                               />
@@ -114,7 +118,7 @@ const AdminLayout = ({ children }: Props) => {
                     </li>
                     {/*
                     <li>
-                      <div className="text-xs font-semibold leading-6 text-gray-400">Your teams</div>
+                      <div className="text-xs font-semibold leading-6 text-black">Your teams</div>
                       <ul role="list" className="-mx-2 mt-2 space-y-1">
                         {teams.map((team) => (
                           <li key={team.name}>
@@ -123,7 +127,7 @@ const AdminLayout = ({ children }: Props) => {
                               className={classNames(
                                 team.current
                                   ? 'bg-gray-50 text-gold'
-                                  : 'text-gray-700 hover:bg-gray-50 hover:text-gold',
+                                  : 'text-black hover:bg-gray-50 hover:text-gold',
                                 'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6',
                               )}
                             >
@@ -131,7 +135,7 @@ const AdminLayout = ({ children }: Props) => {
                                 className={classNames(
                                   team.current
                                     ? 'border-gold text-gold'
-                                    : 'border-gray-200 text-gray-400 group-hover:border-gold group-hover:text-gold',
+                                    : 'border-gray-200 text-black group-hover:border-gold group-hover:text-gold',
                                   'flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border bg-white text-[0.625rem] font-medium',
                                 )}
                               >
@@ -147,11 +151,11 @@ const AdminLayout = ({ children }: Props) => {
                     <li className="mt-auto">
                       <Link
                         href="#"
-                        className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-gold"
+                        className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-black hover:bg-gray-50 hover:text-gold"
                       >
                         <Cog6ToothIcon
                           aria-hidden="true"
-                          className="h-6 w-6 shrink-0 text-gray-400 group-hover:text-gold"
+                          className="h-6 w-6 shrink-0 text-black group-hover:text-gold"
                         />
                         Settings
                       </Link>
@@ -164,15 +168,17 @@ const AdminLayout = ({ children }: Props) => {
         </Dialog>
 
         {/* Static sidebar for desktop */}
-        <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
+        <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-60 lg:flex-col">
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex grow flex-col gap-y-5 overflow-y-auto border-r border-gray-200 bg-white px-6 pb-4">
             <div className="flex h-16 shrink-0 items-center">
-              <img
-                alt="McCarl Capital"
-                src="/banner.png"
-                className="h-16 w-auto"
-              />
+              <Link href="/">
+                <img
+                  alt="McCarl Capital"
+                  src="/banner.png"
+                  className="h-14 w-auto"
+                />
+              </Link>
             </div>
             <nav className="flex flex-1 flex-col">
               <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -188,14 +194,14 @@ const AdminLayout = ({ children }: Props) => {
                           className={classNames(
                             active === item.href
                               ? 'bg-gray-50 text-gold'
-                              : 'text-gray-700 hover:bg-gray-50 hover:text-gold',
+                              : 'text-black hover:bg-gray-50 hover:text-gold',
                             'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 w-full',
                           )}
                         >
                           <item.icon
                             aria-hidden="true"
                             className={classNames(
-                              active === item.href ? 'text-gold' : 'text-gray-400 group-hover:text-gold',
+                              active === item.href ? 'text-gold' : 'text-black group-hover:text-gold',
                               'h-6 w-6 shrink-0',
                             )}
                           />
@@ -207,7 +213,7 @@ const AdminLayout = ({ children }: Props) => {
                 </li>
                 {/*
                 <li>
-                  <div className="text-xs font-semibold leading-6 text-gray-400">Your teams</div>
+                  <div className="text-xs font-semibold leading-6 text-black">Your teams</div>
                   <ul role="list" className="-mx-2 mt-2 space-y-1">
                     {teams.map((team) => (
                       <li key={team.name}>
@@ -216,7 +222,7 @@ const AdminLayout = ({ children }: Props) => {
                           className={classNames(
                             team.current
                               ? 'bg-gray-50 text-gold'
-                              : 'text-gray-700 hover:bg-gray-50 hover:text-gold',
+                              : 'text-black hover:bg-gray-50 hover:text-gold',
                             'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6',
                           )}
                         >
@@ -224,7 +230,7 @@ const AdminLayout = ({ children }: Props) => {
                             className={classNames(
                               team.current
                                 ? 'border-gold text-gold'
-                                : 'border-gray-200 text-gray-400 group-hover:border-gold group-hover:text-gold',
+                                : 'border-gray-200 text-black group-hover:border-gold group-hover:text-gold',
                               'flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border bg-white text-[0.625rem] font-medium',
                             )}
                           >
@@ -240,11 +246,11 @@ const AdminLayout = ({ children }: Props) => {
                 <li className="mt-auto">
                   <Link
                     href="#"
-                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-gray-700 hover:bg-gray-50 hover:text-gold"
+                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-black hover:bg-gray-50 hover:text-gold"
                   >
                     <Cog6ToothIcon
                       aria-hidden="true"
-                      className="h-6 w-6 shrink-0 text-gray-400 group-hover:text-gold"
+                      className="h-6 w-6 shrink-0 text-black group-hover:text-gold"
                     />
                     Settings
                   </Link>
@@ -254,9 +260,9 @@ const AdminLayout = ({ children }: Props) => {
           </div>
         </div>
 
-        <div className="lg:pl-72">
+        <div className="lg:pl-60 w-full">
           <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 bg-white px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
-            <button type="button" onClick={() => setSidebarOpen(true)} className="-m-2.5 p-2.5 text-gray-700 lg:hidden">
+            <button type="button" onClick={() => setSidebarOpen(true)} className="-m-2.5 p-2.5 text-black lg:hidden">
               <span className="sr-only">Open sidebar</span>
               <Bars3Icon aria-hidden="true" className="h-6 w-6" />
             </button>
@@ -266,7 +272,7 @@ const AdminLayout = ({ children }: Props) => {
 
             <div className="flex justify-end flex-1 gap-x-4 self-stretch lg:gap-x-6">
               <div className="flex items-center gap-x-4 lg:gap-x-6">
-                <button type="button" className="-m-2.5 p-2.5 text-gray-400 hover:text-gray-500">
+                <button type="button" className="-m-2.5 p-2.5 text-black hover:text-gray-500">
                   <span className="sr-only">View notifications</span>
                   <BellIcon aria-hidden="true" className="h-6 w-6" />
                 </button>
@@ -275,7 +281,7 @@ const AdminLayout = ({ children }: Props) => {
                 <div aria-hidden="true" className="hidden lg:block lg:h-6 lg:w-px lg:bg-gray-200" />
 
                 {/* Profile dropdown */}
-                <Menu as="div" className="relative">
+                <Menu as="div" className="relative me-3 lg:me-0">
                   <MenuButton className="-m-1.5 flex items-center p-1.5">
                     <span className="sr-only">Open user menu</span>
                     <img
@@ -287,7 +293,7 @@ const AdminLayout = ({ children }: Props) => {
                       <span aria-hidden="true" className="ml-4 text-sm font-semibold leading-6 text-gray-900">
                         Connor
                       </span>
-                      <ChevronDownIcon aria-hidden="true" className="ml-2 h-5 w-5 text-gray-400" />
+                      <ChevronDownIcon aria-hidden="true" className="ml-2 h-5 w-5 text-black" />
                     </span>
                   </MenuButton>
                   <MenuItems
@@ -322,7 +328,6 @@ const AdminLayout = ({ children }: Props) => {
           </main>
         </div>
       </div>
-      
     </>
   )
 }
