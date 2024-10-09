@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 
 import AddEditPost from '@/components/AddEditPost'
@@ -20,7 +20,9 @@ const NewPost = () => {
     }, []);
 
   return (
-    <AddEditPost video={video} />
+    <Suspense>
+      <AddEditPost video={video} />
+    </Suspense>
   )
 }
 
