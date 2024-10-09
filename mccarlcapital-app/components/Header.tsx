@@ -171,7 +171,7 @@ export default function Header() {
                 <PhoneIcon className="h-6 text-white" aria-hidden="true" />
             </Link>
           </div>
-          <div className="mt-6 flow-root">
+          <div className="mt-12 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <Disclosure as="div" className="-mx-3">
