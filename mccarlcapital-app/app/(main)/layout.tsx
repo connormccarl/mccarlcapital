@@ -8,11 +8,11 @@ interface Props {
 
 const MainLayout = ({ children }: Props) => {
   return (
-    <>
+    <div className='h-fit'>
       <Header />
       {children}
       <Footer />
-    </>
+    </div>
   )
 }
 

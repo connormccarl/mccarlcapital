@@ -49,7 +49,12 @@ export default function Header() {
   const [openPanel, setOpenPanel] = useState(false);
 
   return (
-    <header className="bg-white">
+    <header className="bg-white sticky top-0 z-50">
+      <div className="w-full bg-red-600 text-white text-center">
+        <span className='uppercase tracking-widest'>
+          beta
+        </span>
+      </div>
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:p-0 lg:px-8" aria-label="Global">
         <div className="contents lg:flex items-center">
           <div className="flex lg:hidden">
@@ -74,7 +79,7 @@ export default function Header() {
                   <PhoneIcon className="h-6 text-white" aria-hidden="true" />
               </Link>
           </div>
-          <PopoverGroup className="hidden lg:flex lg:gap-x-12 ps-5">
+          <PopoverGroup className="hidden lg:flex lg:gap-x-12 ps-10">
             <Popover className="relative">
               <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:text-gold">
                 About
@@ -134,7 +139,7 @@ export default function Header() {
           <Link href="/signin" className="text-sm font-semibold leading-6 text-gray-900 me-5 hover:text-gold">
             Login
           </Link>
-          <CustomButton>
+          <CustomButton className="pointer-events-none opacity-30">
             Ready to Invest? <span aria-hidden="true">&rarr;</span>
           </CustomButton>
         </div>

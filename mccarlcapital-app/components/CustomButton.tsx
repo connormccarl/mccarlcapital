@@ -1,9 +1,9 @@
 import React from 'react'
 import { Button } from '@headlessui/react'
 
-const CustomButton = ({ variant , children }: { variant?: string, children: React.ReactNode }) => {
+const CustomButton = ({ className, variant , children }: { variant?: string, children: React.ReactNode }) => {
   return (
-    <Button className="rounded bg-gold hover:bg-green hover:text-white px-4 py-2 text-sm font-semibold leading-6 text-white">
+    <Button className={`${className} rounded bg-gold hover:bg-green hover:text-white px-4 py-2 text-sm font-semibold leading-6 text-white`}>
         {children}
     </Button>
   )

@@ -8,13 +8,14 @@ export default function Index() {
       <div className="w-screen bg-[url('/homepage.jpg')] bg-cover">
         <div className="mx-auto max-w-2xl pt-14 pb-20 text-white text-drop-shadow">
           <div className="hidden sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 pb-3 text-sm leading-6">
+            {/*<div className="relative rounded-full px-3 pb-3 text-sm leading-6">
               Announcing our next fund.{' '}
               <a href="#" className="font-semibold text-[#AF8C52] hover:text-white">
                 <span className="absolute inset-0" aria-hidden="true" />
                 Read more <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
+            */}
           </div>
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
@@ -24,10 +25,10 @@ export default function Index() {
               Protecting your future with large commerical real estate investments for the average person. Offering great cashflow and appreciation for your immediate needs and long-term wealth.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <CustomButton>
+              <CustomButton className="pointer-events-none opacity-30">
                 Get started
               </CustomButton>
-              <a href="#" className="text-sm font-semibold leading-6 hover:text-gold">
+              <a href="/about" className="text-sm font-semibold leading-6 hover:text-gold">
                 Learn more <span aria-hidden="true">→</span>
               </a>
             </div>
@@ -40,7 +41,7 @@ export default function Index() {
             Invest with your self-directed IRA or 401K
           </div>
           <div className="mt-2 sm:mt-0">
-            <Button className="ms-3 rounded py-2 px-4 text-base bg-white text-black hover:bg-green hover:text-white">
+            <Button className="pointer-events-none opacity-30 ms-3 rounded py-2 px-4 text-base bg-white text-black hover:bg-green hover:text-white">
               Learn More
             </Button>
           </div>
