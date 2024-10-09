@@ -5,7 +5,7 @@ import { useSearchParams } from 'next/navigation'
 import AddEditPost from '@/components/AddEditPost'
 import { videoService } from '@/services'
 
-const NewPost = () => {
+const Post = () => {
     const params = useSearchParams();
     const search = params.get('video');
     
@@ -20,8 +20,14 @@ const NewPost = () => {
     }, []);
 
   return (
-    <Suspense>
       <AddEditPost video={video} />
+  )
+}
+
+const NewPost = () => {
+  return (
+    <Suspense>
+      <Post />
     </Suspense>
   )
 }
