@@ -3,7 +3,7 @@ import React from 'react'
 const people = [
   {
     name: 'Connor McCarl',
-    role: 'Founder / CEO',
+    role: 'Managing Partner',
     imageUrl:
       '/headshot.jpg',
     bio: 'Connor has been passionate about real estate since he was a child. After a decade of building businesses in software, telecom, and digital marketing, he started helping everyday investors capitalize on the benefits of multifamily real estate. With a knack for systems that scale, Connor has helped McCarl Capital position to reach over 12,000 units in the first five years of inception.',
