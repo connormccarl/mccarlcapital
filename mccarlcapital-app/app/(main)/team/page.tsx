@@ -10,6 +10,15 @@ const people = [
     xUrl: 'https://x.com/connormccarl',
     linkedinUrl: 'https://www.linkedin.com/in/connormccarl/',
   },
+  {
+    name: 'Precious Nasikpo',
+    role: 'Acquisitions Associate',
+    imageUrl:
+      '/precious.jpeg',
+    bio: 'Precious has been passionate about real estate since 2020, blending his expertise in property investment with a commitment to environmental sustainability. As a dedicated environmentalist and real estate investor, he has helped numerous clients make informed, eco-conscious decisions. Recently joining McCarl Capital, precious is excited to bring his unique perspective and drive for sustainable growth to the team, contributing to its ambitious real estate expansion.',
+    xUrl: null,
+    linkedinUrl: 'https://www.linkedin.com/in/precious-nasikpo-12113a286/',
+  },
 ]
 
 const Team = () => {
@@ -32,14 +41,14 @@ const Team = () => {
                 <p className="text-base leading-7 text-gray-600">{person.role}</p>
                 <p className="mt-6 text-base leading-7 text-gray-600">{person.bio}</p>
                 <ul role="list" className="mt-6 flex gap-x-6">
-                  <li>
+                  {person.xUrl && (<li>
                     <a href={person.xUrl} target="_blank" className="text-gray-400 hover:text-gray-500">
                       <span className="sr-only">X</span>
                       <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M11.4678 8.77491L17.2961 2H15.915L10.8543 7.88256L6.81232 2H2.15039L8.26263 10.8955L2.15039 18H3.53159L8.87581 11.7878L13.1444 18H17.8063L11.4675 8.77491H11.4678ZM9.57608 10.9738L8.95678 10.0881L4.02925 3.03974H6.15068L10.1273 8.72795L10.7466 9.61374L15.9156 17.0075H13.7942L9.57608 10.9742V10.9738Z" />
                       </svg>
                     </a>
-                  </li>
+                  </li>)}
                   <li>
                     <a href={person.linkedinUrl} target="_blank" className="text-gray-400 hover:text-gray-500">
                       <span className="sr-only">LinkedIn</span>
