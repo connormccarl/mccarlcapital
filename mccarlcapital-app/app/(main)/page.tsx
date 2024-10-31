@@ -5,7 +5,7 @@ import CustomButton from "@/components/CustomButton";
 export default function Index() {
   return (
     <div className="relative isolate max-w-7xl">
-      <div className="w-screen bg-[url('/homepage.jpg')] bg-cover">
+      <div className="w-screen bg-[url('/lion.jpeg')] bg-cover">
         <div className="mx-auto max-w-2xl pt-14 pb-20 text-white text-drop-shadow">
           <div className="hidden sm:flex sm:justify-center">
             {/*<div className="relative rounded-full px-3 pb-3 text-sm leading-6">
@@ -22,7 +22,7 @@ export default function Index() {
               Access the Best Real Estate Investments
             </h1>
             <p className="mt-6 text-lg leading-8">
-              Protecting your future with large commerical real estate investments for the average person. Offering great cashflow and appreciation for your immediate needs and long-term wealth.
+              Protecting your future with large commerical real estate investments for the passive investor. Offering great cashflow and appreciation for your immediate needs and long-term wealth.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <CustomButton className="pointer-events-none opacity-30">
