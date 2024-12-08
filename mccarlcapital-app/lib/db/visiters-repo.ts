@@ -42,12 +42,12 @@ async function update(id: string, params: UpdateVisiter) {
     // validate
     if(!visiter)
         throw 'Visiter not found.';
-    if(visiter.email !== params.email && await prisma.visiter.findUnique({ where: { email: params.email }}))
+    if(params.email && visiter.email !== params.email && await prisma.visiter.findUnique({ where: { email: params.email }}))
         throw 'Email "' + params.email + '" is already taken.';
 
     params.updatedAt = new Date();
 
-    const updateVisiter = await prisma.post.update({
+    const updateVisiter = await prisma.visiter.update({
         where: { id: id },
         data: params
     });

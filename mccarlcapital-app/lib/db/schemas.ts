@@ -18,15 +18,15 @@ export const postSchema = z.object({
 });
 
 export const visiterSchema = z.object({
-    firstName: z.string(),
-    lastName: z.string(),
-    email: z.string(),
-    phone: z.string(),
-    type: z.string(),
-    streetAddress1: z.string(),
-    streetAddress2: z.string(),
-    city: z.string(),
-    state: z.string(),
-    zip: z.string(),
-    country: z.string(),
+    firstName: z.string().optional(),
+    lastName: z.string().optional(),
+    email: z.string().optional(),
+    phone: z.string().optional(),
+    type: z.string().optional(),
+    streetAddress1: z.string().optional(),
+    streetAddress2: z.string().optional(),
+    city: z.string().optional(),
+    state: z.string().optional(),
+    zip: z.string().optional(),
+    country: z.string().optional(),
 })

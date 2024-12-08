@@ -1,8 +1,10 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DialogTitle } from "@headlessui/react";
 import { CheckIcon } from "@heroicons/react/24/solid";
+
+import { visiterService } from "@/services";
 
 interface modalProps {
   setOpen: (value: boolean) => void;
@@ -13,6 +15,18 @@ const ThreeStep = ({ setOpen }: modalProps) => {
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+
+  useEffect(() => {
+    const visiter = localStorage.getItem("mccarlcapital.user");
+
+    if (visiter) {
+      visiterService.getById(JSON.parse(visiter)).then((x) => {
+        setFirstName(x.firstName ? x.firstName : "");
+        setEmail(x.email ? x.email : "");
+        setPhone(x.phone ? x.phone : "");
+      });
+    }
+  }, []);
 
   const handlePhoneNumber = (e: React.ChangeEvent<HTMLInputElement>) => {
     const inputValue = e.target.value.replace(/\D/g, ""); // Remove non-digits
@@ -39,9 +53,21 @@ const ThreeStep = ({ setOpen }: modalProps) => {
     e.preventDefault();
 
     if (action === "email") {
-      console.log("saved email");
+      visiterService.update(
+        JSON.parse(localStorage.getItem("mccarlcapital.user")!),
+        {
+          firstName,
+          email,
+          type: "investor",
+        }
+      );
     } else if (action === "phone") {
-      console.log("saved phone");
+      visiterService.update(
+        JSON.parse(localStorage.getItem("mccarlcapital.user")!),
+        {
+          phone,
+        }
+      );
     }
   };
 
@@ -204,7 +230,6 @@ const ThreeStep = ({ setOpen }: modalProps) => {
               </button>
               <button
                 type="button"
-                data-autofocus
                 onClick={() => setOpen(false)}
                 className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:col-start-1 sm:mt-0"
               >
@@ -235,7 +260,7 @@ const ThreeStep = ({ setOpen }: modalProps) => {
                     id="phone"
                     value={phone}
                     onChange={(e) => handlePhoneNumber(e)}
-                    minLength={14}
+                    pattern=".{14,14}"
                     type="text"
                     placeholder="Phone Number"
                     aria-label="Phone"
@@ -261,7 +286,6 @@ const ThreeStep = ({ setOpen }: modalProps) => {
               </button>
               <button
                 type="button"
-                data-autofocus
                 onClick={() => setStep(1)}
                 className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:col-start-1 sm:mt-0"
               >
@@ -297,7 +321,6 @@ const ThreeStep = ({ setOpen }: modalProps) => {
               </button>
               <button
                 type="button"
-                data-autofocus
                 onClick={() => setStep(2)}
                 className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:col-start-1 sm:mt-0"
               >
