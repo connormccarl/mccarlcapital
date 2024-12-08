@@ -28,7 +28,7 @@ export default function Index() {
               <CustomButton className="pointer-events-none opacity-30">
                 Get started
               </CustomButton>
-              <a href="/about" className="text-sm font-semibold leading-6 hover:text-gold">
+              <a href="/about" className="text-sm font-semibold leading-6 hover:text-gold-400">
                 Learn more <span aria-hidden="true">→</span>
               </a>
             </div>

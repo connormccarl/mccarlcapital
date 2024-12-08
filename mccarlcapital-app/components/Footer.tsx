@@ -135,12 +135,12 @@ const Footer = () => {
               required
               placeholder="Enter your email"
               autoComplete="email"
-              className="w-full min-w-0 appearance-none rounded-md border-0 bg-white px-3 py-1.5 text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gold sm:w-56 sm:text-sm sm:leading-6"
+              className="w-full min-w-0 appearance-none rounded-md border-0 bg-white px-3 py-1.5 text-base text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gold-400 sm:w-56 sm:text-sm sm:leading-6"
             />
             <div className="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
               <button
                 type="submit"
-                className="pointer-events-none opacity-30 flex w-full items-center justify-center rounded-md bg-gold px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+                className="pointer-events-none opacity-30 flex w-full items-center justify-center rounded-md bg-gold-400 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-400"
               >
                 Subscribe
               </button>

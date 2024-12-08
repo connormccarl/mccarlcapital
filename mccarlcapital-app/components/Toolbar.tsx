@@ -20,7 +20,7 @@ const Toolbar = ({ editor, content }: Props) => {
                 }}
                 className={
                     editor.isActive("bold")
-                        ? "bg-gold text-white p-2 rounded-lg"
+                        ? "bg-gold-400 text-white p-2 rounded-lg"
                         : "text-black p-2"
                 }
             >
@@ -33,7 +33,7 @@ const Toolbar = ({ editor, content }: Props) => {
                 }}
                 className={
                     editor.isActive("italic")
-                        ? "bg-gold text-white p-2 rounded-lg"
+                        ? "bg-gold-400 text-white p-2 rounded-lg"
                         : "text-black p-2"
                 }
             >
@@ -46,7 +46,7 @@ const Toolbar = ({ editor, content }: Props) => {
                 }}
                 className={
                     editor.isActive("underline")
-                        ? "bg-gold text-white p-2 rounded-lg"
+                        ? "bg-gold-400 text-white p-2 rounded-lg"
                         : "text-black p-2"
                 }
             >
@@ -59,7 +59,7 @@ const Toolbar = ({ editor, content }: Props) => {
                 }}
                 className={
                     editor.isActive("strike")
-                        ? "bg-gold text-white p-2 rounded-lg"
+                        ? "bg-gold-400 text-white p-2 rounded-lg"
                         : "text-black p-2"
                 }
             >
@@ -72,7 +72,7 @@ const Toolbar = ({ editor, content }: Props) => {
                 }}
                 className={
                     editor.isActive("heading", { level: 2 })
-                        ? "bg-gold text-white p-2 rounded-lg"
+                        ? "bg-gold-400 text-white p-2 rounded-lg"
                         : "text-black p-2"
                 }
             >
@@ -85,7 +85,7 @@ const Toolbar = ({ editor, content }: Props) => {
                 }}
                 className={
                     editor.isActive("bulletList")
-                        ? "bg-gold text-white p-2 rounded-lg"
+                        ? "bg-gold-400 text-white p-2 rounded-lg"
                         : "text-black p-2"
                 }
             >
@@ -98,7 +98,7 @@ const Toolbar = ({ editor, content }: Props) => {
                 }}
                 className={
                     editor.isActive("orderedList")
-                        ? "bg-gold text-white p-2 rounded-lg"
+                        ? "bg-gold-400 text-white p-2 rounded-lg"
                         : "text-black p-2"
                 }
             >
@@ -111,7 +111,7 @@ const Toolbar = ({ editor, content }: Props) => {
                 }}
                 className={
                     editor.isActive("blockquote")
-                        ? "bg-gold text-white p-2 rounded-lg"
+                        ? "bg-gold-400 text-white p-2 rounded-lg"
                         : "text-black p-2"
                 }
             >
@@ -124,7 +124,7 @@ const Toolbar = ({ editor, content }: Props) => {
                 }}
                 className={
                     editor.isActive("code")
-                        ? "bg-gold text-white p-2 rounded-lg"
+                        ? "bg-gold-400 text-white p-2 rounded-lg"
                         : "text-black p-2"
                 }
             >
@@ -137,7 +137,7 @@ const Toolbar = ({ editor, content }: Props) => {
                 }}
                 className={
                     editor.isActive("undo")
-                        ? "bg-gold text-white p-2 rounded-lg"
+                        ? "bg-gold-400 text-white p-2 rounded-lg"
                         : "text-black p-2"
                 }
             >
@@ -150,7 +150,7 @@ const Toolbar = ({ editor, content }: Props) => {
                 }}
                 className={
                     editor.isActive("redo")
-                        ? "bg-gold text-white p-2 rounded-lg"
+                        ? "bg-gold-400 text-white p-2 rounded-lg"
                         : "text-black p-2"
                 }
             >

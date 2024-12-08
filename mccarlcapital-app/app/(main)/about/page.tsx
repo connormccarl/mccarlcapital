@@ -109,7 +109,7 @@ const Overview = () => {
                             >
                                 Invest Now
                             </Button>
-                            <a href="#benefits" className="text-sm font-semibold leading-6 ml-6 hover:text-gold">
+                            <a href="#benefits" className="text-sm font-semibold leading-6 ml-6 hover:text-gold-400">
                                 Benefits <span aria-hidden="true">→</span>
                             </a>
                         </div>
@@ -235,12 +235,12 @@ const Overview = () => {
             </div>
             <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-4 gap-y-8 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             {benefits.map((value) => (
-                <div key={value.title} className="group overflow-hidden rounded-lg bg-white shadow hover:bg-gold hover:text-white">
+                <div key={value.title} className="group overflow-hidden rounded-lg bg-white shadow hover:bg-gold-400 hover:text-white">
                     <div className="px-5 py-8 flex flex-col justify-center items-center gap-y-4">
                         <value.icon className='size-14' />
                         <div className='text-xl'>{value.title}</div>
                         <div className='text-center'>{value.description}</div>
-                        <Button className='px-16 py-2.5 bg-gold text-sm text-white group-hover:bg-white group-hover:text-black'>{value.button}</Button>
+                        <Button className='px-16 py-2.5 bg-gold-400 text-sm text-white group-hover:bg-white group-hover:text-black'>{value.button}</Button>
                     </div>
                 </div>
             ))}

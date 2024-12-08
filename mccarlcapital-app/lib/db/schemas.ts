@@ -16,3 +16,17 @@ export const postSchema = z.object({
     content: z.string(),
     published: z.boolean(),
 });
+
+export const visiterSchema = z.object({
+    firstName: z.string(),
+    lastName: z.string(),
+    email: z.string(),
+    phone: z.string(),
+    type: z.string(),
+    streetAddress1: z.string(),
+    streetAddress2: z.string(),
+    city: z.string(),
+    state: z.string(),
+    zip: z.string(),
+    country: z.string(),
+})

@@ -73,8 +73,8 @@ const AddEditPost = (props: any) => {
                     <Listbox value={status} onChange={setStatus}>
                         <Label className="sr-only">Change published status</Label>
                         <div className="relative">
-                            <div className="inline-flex divide-x divide-gold rounded-md shadow-sm">
-                                <div className="inline-flex items-center gap-x-1.5 rounded-l-md bg-gold px-3 py-2 text-white shadow-sm">
+                            <div className="inline-flex divide-x divide-gold-400 rounded-md shadow-sm">
+                                <div className="inline-flex items-center gap-x-1.5 rounded-l-md bg-gold-400 px-3 py-2 text-white shadow-sm">
                                     {status.published ? 
                                         <EyeIcon aria-hidden="true" className="-ml-0.5 h-5 w-5" />
                                     :
@@ -83,7 +83,7 @@ const AddEditPost = (props: any) => {
                                    
                                     <p className="text-sm font-semibold">{status.title}</p>
                                 </div>
-                                <ListboxButton className="inline-flex items-center rounded-l-none rounded-r-md bg-gold p-2 hover:bg-gold focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2 focus:ring-offset-gray-50">
+                                <ListboxButton className="inline-flex items-center rounded-l-none rounded-r-md bg-gold-400 p-2 hover:bg-gold-400 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-offset-2 focus:ring-offset-gray-50">
                                     <span className="sr-only">Change published status</span>
                                     <ChevronDownIcon aria-hidden="true" className="h-5 w-5 text-white" />
                                 </ListboxButton>
@@ -97,12 +97,12 @@ const AddEditPost = (props: any) => {
                                 <ListboxOption
                                 key={option.title}
                                 value={option}
-                                className="group cursor-default select-none p-4 text-sm text-black data-[focus]:bg-gold data-[focus]:text-white"
+                                className="group cursor-default select-none p-4 text-sm text-black data-[focus]:bg-gold-400 data-[focus]:text-white"
                                 >
                                 <div className="flex flex-col">
                                     <div className="flex justify-between">
                                     <p className="font-normal group-data-[status]:font-semibold">{option.title}</p>
-                                    <span className="text-gold group-data-[focus]:text-white [.group:not([data-status])_&]:hidden">
+                                    <span className="text-gold-400 group-data-[focus]:text-white [.group:not([data-status])_&]:hidden">
                                         <CheckIcon aria-hidden="true" className="h-5 w-5" />
                                     </span>
                                     </div>
@@ -131,7 +131,7 @@ const AddEditPost = (props: any) => {
                         }}
                         type="text"
                         autoComplete="title"
-                        className="peer block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gold sm:text-sm sm:leading-6 invalid:[&:not(:placeholder-shown):not(:focus)]:ring-red-500"
+                        className="peer block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gold-400 sm:text-sm sm:leading-6 invalid:[&:not(:placeholder-shown):not(:focus)]:ring-red-500"
                         required
                         />
                         <span className="mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
@@ -146,7 +146,7 @@ const AddEditPost = (props: any) => {
                     Slug
                 </label>
                 <div className="mt-2 flex">
-                    <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-gold w-9/12">
+                    <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-gold-400 w-9/12">
                         <span className="flex select-none items-center pl-3 text-gray-500 sm:text-sm">mccarlcapital.com/blog/</span>
                         <input
                             id="slug"
@@ -182,7 +182,7 @@ const AddEditPost = (props: any) => {
                     value={content}
                     onChange={e => setContent(e.target.value)}
                     rows={10}
-                    className="peer block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gold sm:text-sm sm:leading-6 invalid:[&:not(:placeholder-shown):not(:focus)]:ring-red-500"
+                    className="peer block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gold-400 sm:text-sm sm:leading-6 invalid:[&:not(:placeholder-shown):not(:focus)]:ring-red-500"
                     defaultValue={''}
                     required
                     />*/}
@@ -204,7 +204,7 @@ const AddEditPost = (props: any) => {
                         value={video}
                         onChange={e => setVideo(e.target.value)}
                         autoComplete="video"
-                        className="block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-gold sm:max-w-xs sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-gold-400 sm:max-w-xs sm:text-sm sm:leading-6"
                         >
                             <option value=''>None</option>
                             {videos.map((option: any) => (
@@ -236,7 +236,7 @@ const AddEditPost = (props: any) => {
                         value={category}
                         onChange={e => setCategory(e.target.value)}
                         autoComplete="category"
-                        className="block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-gold sm:max-w-xs sm:text-sm sm:leading-6"
+                        className="block w-full rounded-md border-0 py-1.5 text-black shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-gold-400 sm:max-w-xs sm:text-sm sm:leading-6"
                         >
                             {categories.map((option) => (
                                 <option key={option.value} value={option.value}>{option.name}</option>
@@ -254,7 +254,7 @@ const AddEditPost = (props: any) => {
         </button>
         <button
           type="submit"
-          className="rounded-md bg-gold px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold group-invalid:pointer-events-none group-invalid:opacity-30"
+          className="rounded-md bg-gold-400 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-400 group-invalid:pointer-events-none group-invalid:opacity-30"
         >
           Save
         </button>

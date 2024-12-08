@@ -93,15 +93,48 @@ model Video {
 }
 
 model Post {
-  id        String   @id @default(cuid())
+  id        String  @id @default(cuid())
   title     String
-  slug      String   @unique
+  slug      String  @unique
   content   String
   tag       String?
   videoId   String?
   published Boolean
+
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   video Video? @relation(fields: [videoId], references: [id])
+}
+
+model Visiter {
+  id             String  @id @default(cuid())
+  firstName      String?
+  lastName       String?
+  email          String? @unique
+  phone          String?
+  type           String
+  streetAddress1 String?
+  streetAddress2 String?
+  city           String?
+  state          String?
+  zip            String?
+  country        String?
+
+  logs Log[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Log {
+  id        String @id @default(cuid())
+  visiterId String
+  type      String
+  path      String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  visiter Visiter @relation(fields: [visiterId], references: [id])
 }

@@ -81,7 +81,7 @@ export default function Header() {
           </div>
           <PopoverGroup className="hidden lg:flex lg:gap-x-12 ps-10">
             <Popover className="relative">
-              <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:text-gold">
+              <PopoverButton className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 hover:text-gold-400">
                 About
                 <ChevronDownIcon className="h-5 w-5 flex-none text-gray-400" aria-hidden="true" />
               </PopoverButton>
@@ -124,19 +124,19 @@ export default function Header() {
             {/*<Link href="#" className="text-sm font-semibold leading-6 text-gray-900">
               Investments
             </Link>*/}
-            <Link href="/contact" className="text-sm font-semibold leading-6 text-gray-900  hover:text-gold">
+            <Link href="/contact" className="text-sm font-semibold leading-6 text-gray-900  hover:text-gold-400">
               Contact
             </Link>
-            {/*<Link href="/ira" className="text-sm font-semibold leading-6 text-gray-900 hover:text-gold">
+            {/*<Link href="/ira" className="text-sm font-semibold leading-6 text-gray-900 hover:text-gold-400">
               IRA
             </Link>*/}
           </PopoverGroup>
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center">
-          <Link href="tel:+1(925)378-1728" className='me-5 hover:text-gold'>
+          <Link href="tel:+1(925)378-1728" className='me-5 hover:text-gold-400'>
               (954) 361-6700
           </Link>
-          <Link href="/signin" className="text-sm font-semibold leading-6 text-gray-900 me-5 hover:text-gold">
+          <Link href="/signin" className="text-sm font-semibold leading-6 text-gray-900 me-5 hover:text-gold-400">
             Login
           </Link>
           <CustomButton className="pointer-events-none opacity-30">

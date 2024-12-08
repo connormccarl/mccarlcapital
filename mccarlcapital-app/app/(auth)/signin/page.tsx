@@ -40,7 +40,7 @@ const Signin = () => {
               </h2>
               <p className="mt-2 text-sm leading-6 text-gray-500 hidden">
                 Not a member?{' '}
-                <Link href="/signup" className="font-semibold text-gold hover:text-green">
+                <Link href="/signup" className="font-semibold text-gold-400 hover:text-green">
                   Create an account
                 </Link>
               </p>
@@ -57,7 +57,7 @@ const Signin = () => {
                       <input
                         {...register('email')}
                         type="email"
-                        className={`block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ${ errors.email ? 'ring-red-600' : 'ring-gray-300'} placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gold sm:text-sm sm:leading-6`}
+                        className={`block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ${ errors.email ? 'ring-red-600' : 'ring-gray-300'} placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gold-400 sm:text-sm sm:leading-6`}
                       />
                     </div>
                     <div className="mt-1 text-red-600 text-xs">{errors.email?.message}</div>
@@ -71,7 +71,7 @@ const Signin = () => {
                       <input
                         {...register('password')}
                         type="password"
-                        className={`block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ${ errors.password ? 'ring-red-600' : 'ring-gray-300'} placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gold sm:text-sm sm:leading-6`}
+                        className={`block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ${ errors.password ? 'ring-red-600' : 'ring-gray-300'} placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gold-400 sm:text-sm sm:leading-6`}
                       />
                     </div>
                     <div className="mt-1 text-red-600 text-xs">{errors.password?.message}</div>
@@ -83,7 +83,7 @@ const Signin = () => {
                         id="remember-me"
                         name="remember-me"
                         type="checkbox"
-                        className="h-4 w-4 rounded border-gray-300 text-gold focus:ring-gold"
+                        className="h-4 w-4 rounded border-gray-300 text-gold-400 focus:ring-gold-400"
                       />
                       <label htmlFor="remember-me" className="ml-3 block text-sm leading-6 text-gray-700">
                         Remember me
@@ -91,7 +91,7 @@ const Signin = () => {
                     </div>
 
                     <div className="text-sm leading-6">
-                      <a href="#" className="font-semibold text-gold hover:text-green">
+                      <a href="#" className="font-semibold text-gold-400 hover:text-green">
                         Forgot password?
                       </a>
                     </div>
@@ -100,7 +100,7 @@ const Signin = () => {
                   <div>
                     <button
                       type="submit"
-                      className="flex w-full justify-center rounded-md bg-gold px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+                      className="flex w-full justify-center rounded-md bg-gold-400 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-400"
                     >
                       Sign in
                     </button>

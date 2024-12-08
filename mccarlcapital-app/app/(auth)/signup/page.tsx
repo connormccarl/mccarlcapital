@@ -56,7 +56,7 @@ const Signup = () => {
               </h2>
               <p className="mt-2 text-sm leading-6 text-gray-500">
                 Have an account already?{' '}
-                <Link href="/signin" className="font-semibold text-gold hover:text-green">
+                <Link href="/signin" className="font-semibold text-gold-400 hover:text-green">
                   Login
                 </Link>
               </p>
@@ -74,7 +74,7 @@ const Signup = () => {
                         <input
                           {...register('firstName')}
                           type="text"
-                          className={`block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ${ errors.firstName ? 'ring-red-600' : 'ring-gray-300'} placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gold sm:text-sm sm:leading-6`}
+                          className={`block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ${ errors.firstName ? 'ring-red-600' : 'ring-gray-300'} placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gold-400 sm:text-sm sm:leading-6`}
                         />
                       </div>
                       <div className="mt-1 text-red-600 text-xs">{errors.firstName?.message}</div>
@@ -88,7 +88,7 @@ const Signup = () => {
                         <input
                           {...register('lastName')}
                           type="text"
-                          className={`block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ${ errors.lastName ? 'ring-red-600' : 'ring-gray-300'} placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gold sm:text-sm sm:leading-6`}
+                          className={`block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ${ errors.lastName ? 'ring-red-600' : 'ring-gray-300'} placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gold-400 sm:text-sm sm:leading-6`}
                         />
                       </div>
                       <div className="mt-1 text-red-600 text-xs">{errors.lastName?.message}</div>
@@ -102,7 +102,7 @@ const Signup = () => {
                         <input
                           {...register('email')}
                           type="email"
-                          className={`block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ${ errors.email ? 'ring-red-600' : 'ring-gray-300'} placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gold sm:text-sm sm:leading-6`}
+                          className={`block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ${ errors.email ? 'ring-red-600' : 'ring-gray-300'} placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gold-400 sm:text-sm sm:leading-6`}
                         />
                       </div>
                       <div className="mt-1 text-red-600 text-xs">{errors.email?.message}</div>
@@ -116,7 +116,7 @@ const Signup = () => {
                         <input
                           {...register('password')}
                           type="password"
-                          className={`block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ${ errors.password ? 'ring-red-600' : 'ring-gray-300'} placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gold sm:text-sm sm:leading-6`}
+                          className={`block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ${ errors.password ? 'ring-red-600' : 'ring-gray-300'} placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gold-400 sm:text-sm sm:leading-6`}
                         />
                       </div>
                       <div className="mt-1 text-red-600 text-xs">{errors.password?.message}</div>
@@ -126,7 +126,7 @@ const Signup = () => {
                   <div>
                     <button
                       type="submit"
-                      className="cursor-not-allowed flex w-full justify-center rounded-md bg-gold px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+                      className="cursor-not-allowed flex w-full justify-center rounded-md bg-gold-400 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-green hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-400"
                       disabled
                     >
                       Sign Up

@@ -37,3 +37,21 @@ export interface UpdatePost {
     published?: boolean,
     [key: string]: any
 }
+
+export interface UpdateVisiter {
+    firstName?: string,
+    lastName?: string,
+    email?: string,
+    phone?: string,
+    type?: string,
+    streetAddress1?: string,
+    streetAddress2?: string,
+    city?: string,
+    state?: string,
+    zip?: string,
+    country?: string,
+    [key: string]: any
+}
+
+
+

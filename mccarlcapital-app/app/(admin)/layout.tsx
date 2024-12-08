@@ -98,15 +98,15 @@ const AdminLayout = ({ children }: Props) => {
                               }}
                               className={classNames(
                                 active === item.href
-                                  ? 'bg-gray-50 text-gold'
-                                  : 'text-black hover:bg-gray-50 hover:text-gold',
+                                  ? 'bg-gray-50 text-gold-400'
+                                  : 'text-black hover:bg-gray-50 hover:text-gold-400',
                                 'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 w-full',
                               )}
                             >
                               <item.icon
                                 aria-hidden="true"
                                 className={classNames(
-                                  active === item.href ? 'text-gold' : 'text-black group-hover:text-gold',
+                                  active === item.href ? 'text-gold-400' : 'text-black group-hover:text-gold-400',
                                   'h-6 w-6 shrink-0',
                                 )}
                               />
@@ -126,16 +126,16 @@ const AdminLayout = ({ children }: Props) => {
                               href={team.href}
                               className={classNames(
                                 team.current
-                                  ? 'bg-gray-50 text-gold'
-                                  : 'text-black hover:bg-gray-50 hover:text-gold',
+                                  ? 'bg-gray-50 text-gold-400'
+                                  : 'text-black hover:bg-gray-50 hover:text-gold-400',
                                 'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6',
                               )}
                             >
                               <span
                                 className={classNames(
                                   team.current
-                                    ? 'border-gold text-gold'
-                                    : 'border-gray-200 text-black group-hover:border-gold group-hover:text-gold',
+                                    ? 'border-gold-400 text-gold-400'
+                                    : 'border-gray-200 text-black group-hover:border-gold-400 group-hover:text-gold-400',
                                   'flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border bg-white text-[0.625rem] font-medium',
                                 )}
                               >
@@ -151,11 +151,11 @@ const AdminLayout = ({ children }: Props) => {
                     <li className="mt-auto">
                       <Link
                         href="#"
-                        className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-black hover:bg-gray-50 hover:text-gold"
+                        className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-black hover:bg-gray-50 hover:text-gold-400"
                       >
                         <Cog6ToothIcon
                           aria-hidden="true"
-                          className="h-6 w-6 shrink-0 text-black group-hover:text-gold"
+                          className="h-6 w-6 shrink-0 text-black group-hover:text-gold-400"
                         />
                         Settings
                       </Link>
@@ -193,15 +193,15 @@ const AdminLayout = ({ children }: Props) => {
                           }}
                           className={classNames(
                             active === item.href
-                              ? 'bg-gray-50 text-gold'
-                              : 'text-black hover:bg-gray-50 hover:text-gold',
+                              ? 'bg-gray-50 text-gold-400'
+                              : 'text-black hover:bg-gray-50 hover:text-gold-400',
                             'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 w-full',
                           )}
                         >
                           <item.icon
                             aria-hidden="true"
                             className={classNames(
-                              active === item.href ? 'text-gold' : 'text-black group-hover:text-gold',
+                              active === item.href ? 'text-gold-400' : 'text-black group-hover:text-gold-400',
                               'h-6 w-6 shrink-0',
                             )}
                           />
@@ -221,16 +221,16 @@ const AdminLayout = ({ children }: Props) => {
                           href={team.href}
                           className={classNames(
                             team.current
-                              ? 'bg-gray-50 text-gold'
-                              : 'text-black hover:bg-gray-50 hover:text-gold',
+                              ? 'bg-gray-50 text-gold-400'
+                              : 'text-black hover:bg-gray-50 hover:text-gold-400',
                             'group flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6',
                           )}
                         >
                           <span
                             className={classNames(
                               team.current
-                                ? 'border-gold text-gold'
-                                : 'border-gray-200 text-black group-hover:border-gold group-hover:text-gold',
+                                ? 'border-gold-400 text-gold-400'
+                                : 'border-gray-200 text-black group-hover:border-gold-400 group-hover:text-gold-400',
                               'flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border bg-white text-[0.625rem] font-medium',
                             )}
                           >
@@ -246,11 +246,11 @@ const AdminLayout = ({ children }: Props) => {
                 <li className="mt-auto">
                   <Link
                     href="#"
-                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-black hover:bg-gray-50 hover:text-gold"
+                    className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-black hover:bg-gray-50 hover:text-gold-400"
                   >
                     <Cog6ToothIcon
                       aria-hidden="true"
-                      className="h-6 w-6 shrink-0 text-black group-hover:text-gold"
+                      className="h-6 w-6 shrink-0 text-black group-hover:text-gold-400"
                     />
                     Settings
                   </Link>
