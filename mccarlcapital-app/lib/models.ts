@@ -50,7 +50,7 @@ export interface UpdateVisiter {
     state?: string,
     zip?: string,
     country?: string,
-    [key: string]: any
+    updatedAt?: Date
 }
 
 
