@@ -84,7 +84,7 @@ const Footer = () => {
           <img
             alt="McCarl Capital"
             src="/banner.png"
-            className="h-20"
+            className="h-20 p-4"
           />
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
             <div className="grid grid-cols-2 gap-8">

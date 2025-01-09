@@ -70,7 +70,7 @@ export default function Header() {
           <div className="flex lg:flex-1">
             <Link href="/" className="-m-1.5 p-1.5">
               <span className="sr-only">McCarl Capital</span>
-              <Image className="h-16 lg:h-20 w-auto" src="/banner.png" alt="McCarl Capital" width={275} height={80} />
+              <Image className="h-16 lg:h-20 w-auto p-4" src="/banner.png" alt="McCarl Capital" width={275} height={80} />
             </Link>
           </div>
           <div className="flex lg:hidden">
