@@ -28,7 +28,16 @@ export default function RootLayout({
       {process.env.NODE_ENV === "production" ? (
         <GoogleTagManager gtmId="GTM-TXSSXL55" />
       ) : null}
-      <body className={`${inter.className} h-full`}>{children}</body>
+      <body className={`${inter.className} h-full`}>
+        {children}
+        <chat-widget
+          location-id="ZELJzSVAkrlrUbN2Vroc">
+        </chat-widget>
+        <script
+          src="https://widgets.leadconnectorhq.com/loader.js" 
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" >
+        </script>
+      </body>
     </html>
   );
 }
