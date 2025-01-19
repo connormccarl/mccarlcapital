@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Barlow } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Tracker from "@/components/Tracker";
+import ChatWidget from "@/components/ChatWidget";
 
 import "./globals.css";
 
@@ -22,6 +23,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en" className="h-full bg-white scroll-smooth">
       <Tracker />
@@ -30,13 +32,9 @@ export default function RootLayout({
       ) : null}
       <body className={`${inter.className} h-full`}>
         {children}
-        <chat-widget
-          location-id="ZELJzSVAkrlrUbN2Vroc">
-        </chat-widget>
-        <script
-          src="https://widgets.leadconnectorhq.com/loader.js" 
-          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" >
-        </script>
+        
+        {/*  GOHIGHLEVEL WEBCHAT */}
+        <ChatWidget />
       </body>
     </html>
   );
