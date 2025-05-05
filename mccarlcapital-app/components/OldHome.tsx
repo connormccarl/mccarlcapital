@@ -21,7 +21,7 @@ const Home = () => {
                     data-original="#000000" />
             </svg>
             <a href="mailto:invest@connormccarl.com" className="text-white text-lg md:text-md ml-3 hover:text-[#AF8C52]">
-              invest@mccarlcapital.com
+              connormccarl@gmail.com
             </a>
           </span>
           <span className="flex items-center md:ms-5">

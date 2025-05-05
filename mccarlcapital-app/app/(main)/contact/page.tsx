@@ -67,7 +67,7 @@ const Contact = () => {
                 </dt>
                 <dd>
                   <a className="" href="mailto:invest@connormccarl.com">
-                    invest@mccarlcapital.com
+                    connormccarl@gmail.com
                   </a>
                 </dd>
               </div>
