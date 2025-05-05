@@ -23,8 +23,8 @@ export async function POST(
     `;
 
     const options = {
-        to: 'connor.mccarl@mccarlcapital.com',
-        replyTo: 'connor.mccarl@mccarlcapital.com',
+        to: 'connormccarl@gmail.com',
+        replyTo: 'connormccarl@gmail.com',
         subject: 'Website Contact',
         /*text: plainText,*/
         html: htmlContent,

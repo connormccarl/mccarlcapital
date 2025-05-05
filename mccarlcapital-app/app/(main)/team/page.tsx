@@ -11,7 +11,7 @@ const people = [
     bio: 'Connor has been passionate about real estate since he was a child. After a decade of building businesses in software, telecom, and digital marketing, he started helping everyday investors capitalize on the benefits of multifamily real estate. With a knack for systems that scale, Connor has helped McCarl Capital position to reach over 12,000 units in the first five years of inception.',
     xUrl: 'https://x.com/connormccarl',
     linkedinUrl: 'https://www.linkedin.com/in/connormccarl/',
-    email: 'connor.mccarl@mccarlcapital.com',
+    email: 'connormccarl@gmail.com',
     telephone: '+1 (925) 378-1728,,,,,,800'
   },
   {
