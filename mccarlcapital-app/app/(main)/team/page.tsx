@@ -49,7 +49,7 @@ const people = [
     linkedinUrl: 'https://www.linkedin.com/in/roargardner/',
     email: null,
     telephone: null
-  },
+  }/*,
   {
     name: 'Precious Nasikpo',
     title: 'Acquisitions Associate',
@@ -61,7 +61,7 @@ const people = [
     linkedinUrl: 'https://www.linkedin.com/in/precious-nasikpo-12113a286/',
     email: 'precious.nasikpo@mccarlcapital.com',
     telephone: '+1 (925) 378-1728,,,,,,802'
-  },
+  },*/
 ]
 
 const Team = () => {
