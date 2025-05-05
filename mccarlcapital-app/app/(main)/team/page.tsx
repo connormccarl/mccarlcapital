@@ -12,7 +12,7 @@ const people = [
     xUrl: 'https://x.com/connormccarl',
     linkedinUrl: 'https://www.linkedin.com/in/connormccarl/',
     email: 'connor.mccarl@mccarlcapital.com',
-    telephone: '+1 (954) 361-6700,,,,,,800'
+    telephone: '+1 (925) 378-1728,,,,,,800'
   },
   {
     name: 'Joshua Ferrari',
@@ -60,7 +60,7 @@ const people = [
     xUrl: null,
     linkedinUrl: 'https://www.linkedin.com/in/precious-nasikpo-12113a286/',
     email: 'precious.nasikpo@mccarlcapital.com',
-    telephone: '+1 (954) 361-6700,,,,,,802'
+    telephone: '+1 (925) 378-1728,,,,,,802'
   },
 ]
 

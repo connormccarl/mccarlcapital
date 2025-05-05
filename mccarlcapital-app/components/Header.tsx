@@ -134,7 +134,7 @@ export default function Header() {
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center">
           <Link href="tel:+1(925)378-1728" className='me-5 hover:text-gold-400'>
-              (954) 361-6700
+              (925) 378-1728
           </Link>
           <Link href="/signin" className="text-sm font-semibold leading-6 text-gray-900 me-5 hover:text-gold-400">
             Login

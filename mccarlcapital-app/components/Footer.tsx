@@ -91,7 +91,7 @@ const Footer = () => {
               <div>
                 <h3 className="text-sm font-semibold leading-6 text-gray-900">Contact</h3>
                 <div className="mt-6 space-y-2">
-                  <div className='text-sm leading-6 text-gray-600'>+1 (954) 361-6700</div>
+                  <div className='text-sm leading-6 text-gray-600'>+1 (925) 378-1728</div>
                   <div className='text-sm leading-6 text-gray-600'>invest@mccarlcapital.com</div>
                 </div>
               </div>

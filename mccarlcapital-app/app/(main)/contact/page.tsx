@@ -55,8 +55,8 @@ const Contact = () => {
                   <PhoneIcon className="h-7 w-6 text-gray-400" aria-hidden="true" />
                 </dt>
                 <dd>
-                  <a className="" href="tel:+1 (954) 361-6700">
-                    +1 (954) 361-6700
+                  <a className="" href="tel:+1 (925) 378-1728">
+                    +1 (925) 378-1728
                   </a>
                 </dd>
               </div>
