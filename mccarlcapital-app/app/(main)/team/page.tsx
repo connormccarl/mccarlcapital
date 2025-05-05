@@ -12,7 +12,7 @@ const people = [
     xUrl: 'https://x.com/connormccarl',
     linkedinUrl: 'https://www.linkedin.com/in/connormccarl/',
     email: 'connormccarl@gmail.com',
-    telephone: '+1 (925) 378-1728,,,,,,800'
+    telephone: '+1 (925) 378-1728'
   },
   {
     name: 'Joshua Ferrari',

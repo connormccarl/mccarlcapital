@@ -35,8 +35,8 @@ const about = [
   { name: 'Blog', description: 'Educate yourself and stay informed', href: '/blog', icon: NewspaperIcon },
 ]
 const callsToAction = [
-  { name: 'Watch overview', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
+  { name: 'Watch overview', href: 'https://youtu.be/_TORCbvwHnU', icon: PlayCircleIcon },
+  { name: 'Contact sales', href: 'tel:+1 (925) 378-1728', icon: PhoneIcon },
 ]
 
 const classNames = (...classes: string[]) => {
