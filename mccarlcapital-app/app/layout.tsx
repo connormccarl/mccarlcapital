@@ -3,6 +3,7 @@ import { Inter, Barlow } from "next/font/google";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Tracker from "@/components/Tracker";
 import ChatWidget from "@/components/ChatWidget";
+import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
 
