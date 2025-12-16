@@ -11,6 +11,7 @@ const schema = z.object({
 });
 
 export async function POST(request: NextRequest) {
+    /*
     const body = await request.json();
 
     const validation = schema.safeParse(body);
@@ -34,4 +35,5 @@ export async function POST(request: NextRequest) {
     });
 
     return NextResponse.json({ email: newUser.email });
+    */ return NextResponse.json({})
 }

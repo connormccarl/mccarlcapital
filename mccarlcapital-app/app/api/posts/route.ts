@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { postsRepo } from "@/lib";
 
 export async function POST(request: NextRequest) {
+    /*
     const body = await request.json();
 
     postsRepo.add({ 
@@ -14,11 +15,14 @@ export async function POST(request: NextRequest) {
      });
 
     return NextResponse.json({})
+    */ return NextResponse.json({})
 }
 
 export async function GET(request: NextRequest) {
+    /*
     const videos = await postsRepo.getAll();
 
     return NextResponse.json(videos);
+    */ return NextResponse.json({})
 }
 

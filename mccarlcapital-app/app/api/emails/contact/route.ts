@@ -5,6 +5,7 @@ import sendMail from '@/lib/email/gmail';
 export async function POST(
     request: NextRequest,
 ) {
+    /*
     const body = await request.json();
 
     const htmlContent = `
@@ -26,7 +27,7 @@ export async function POST(
         to: 'connormccarl@gmail.com',
         replyTo: 'connormccarl@gmail.com',
         subject: 'Website Contact',
-        /*text: plainText,*/
+        /*text: plainText,
         html: htmlContent,
         textEncoding: 'base64',
         headers: [
@@ -41,4 +42,5 @@ export async function POST(
     } catch (e) {
         throw e;
     }
+    */ return NextResponse.json({})
 }
