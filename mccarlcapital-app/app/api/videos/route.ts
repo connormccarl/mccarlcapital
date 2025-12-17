@@ -17,7 +17,7 @@ export async function POST(request: NextRequest) {
     });
 
     return NextResponse.json({})
-    */ return NextResponse.json({})
+    */ return NextResponse.json({});
 }
 
 export async function GET(request: NextRequest) {
